@@ -27,7 +27,9 @@ public class MainActivity extends AppCompatActivity {
                 new NewsApiClient.ArticlesResponseCallback() {
                     @Override
                     public void onSuccess(ArticleResponse response) {
-                        Log.i("Got RESPONSE",response.toString());
+                        response.getArticles().forEach((a)->{
+                            Log.i("Article",a.getTitle());
+                        });
                     }
 
                     @Override
