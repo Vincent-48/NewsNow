@@ -38,6 +38,10 @@ public class NewsRecyclerAdapter extends RecyclerView.Adapter<NewsRecyclerAdapte
                 .placeholder(R.drawable.no_image_icon)
                 .into(holder.imageView);
     }
+    void updateData(List<Article>data){
+        articleList.clear();
+        articleList.addAll(data);
+    }
 
     @Override
     public int getItemCount() {
